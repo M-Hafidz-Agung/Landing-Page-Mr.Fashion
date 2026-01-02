@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
@@ -28,9 +30,9 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-bold mb-6">{t.footer.quickLinks}</h4>
                         <ul className="space-y-3 text-sm">
-                            <li><Link to="/" className="hover:text-pink-500 transition-colors">{t.nav.home}</Link></li>
-                            <li><Link to="/services" className="hover:text-pink-500 transition-colors">{t.nav.services}</Link></li>
-                            <li><Link to="/contact" className="hover:text-pink-500 transition-colors">{t.nav.contact}</Link></li>
+                            <li><Link href="/" className="hover:text-pink-500 transition-colors">{t.nav.home}</Link></li>
+                            <li><Link href="/services" className="hover:text-pink-500 transition-colors">{t.nav.services}</Link></li>
+                            <li><Link href="/contact" className="hover:text-pink-500 transition-colors">{t.nav.contact}</Link></li>
                         </ul>
                     </div>
 

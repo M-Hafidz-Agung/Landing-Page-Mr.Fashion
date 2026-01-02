@@ -1,5 +1,8 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
@@ -7,7 +10,7 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const location = useLocation();
+    const pathname = usePathname();
     const { t, language, toggleLanguage } = useLanguage();
 
     useEffect(() => {
@@ -42,7 +45,7 @@ export default function Navbar() {
 
                     {/* 1. LEFT: Logo */}
                     <div className="flex-shrink-0 flex items-center w-1/4">
-                        <Link to="/" className="font-serif text-2xl font-bold text-stone-800 tracking-tighter hover:text-pink-600 transition-colors">
+                        <Link href="/" className="font-serif text-2xl font-bold text-stone-800 tracking-tighter hover:text-pink-600 transition-colors">
                             Mr. Fashion
                         </Link>
                     </div>
@@ -53,12 +56,12 @@ export default function Navbar() {
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
-                                    to={link.path}
-                                    className={`text-sm font-medium transition-colors duration-200 relative group ${location.pathname === link.path ? 'text-pink-600' : 'text-stone-600 hover:text-pink-600'
+                                    href={link.path}
+                                    className={`text-sm font-medium transition-colors duration-200 relative group ${pathname === link.path ? 'text-pink-600' : 'text-stone-600 hover:text-pink-600'
                                         }`}
                                 >
                                     {link.name}
-                                    {location.pathname === link.path && (
+                                    {pathname === link.path && (
                                         <motion.div
                                             layoutId="underline"
                                             className="absolute -bottom-1 left-0 right-0 h-0.5 bg-pink-600"
@@ -112,10 +115,10 @@ export default function Navbar() {
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
-                                    to={link.path}
-                                    className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === link.path
-                                            ? 'text-pink-600 bg-pink-50'
-                                            : 'text-stone-600 hover:text-pink-600 hover:bg-pink-50/50'
+                                    href={link.path}
+                                    className={`block px-3 py-2 rounded-md text-base font-medium ${pathname === link.path
+                                        ? 'text-pink-600 bg-pink-50'
+                                        : 'text-stone-600 hover:text-pink-600 hover:bg-pink-50/50'
                                         }`}
                                     onClick={() => setIsOpen(false)}
                                 >

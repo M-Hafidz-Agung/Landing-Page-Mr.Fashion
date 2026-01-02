@@ -27,11 +27,11 @@ $Location = "eastasia"
 $ResourceGroup = "landing-page-rg"
 
 Write-Host "Building project..." -ForegroundColor Cyan
-Remove-Item -Path "dist" -Recurse -Force -ErrorAction SilentlyContinue
+Remove-Item -Path "out" -Recurse -Force -ErrorAction SilentlyContinue
 npm run build
 
-if (-not (Test-Path "dist")) {
-    Write-Host "Error: Build failed. 'dist' folder not found." -ForegroundColor Red
+if (-not (Test-Path "out")) {
+    Write-Host "Error: Build failed. 'out' folder not found." -ForegroundColor Red
     exit 1
 }
 
@@ -59,7 +59,7 @@ Set-Content -Path "dist\web.config" -Value $webConfigContent
 
 # Deploy
 Write-Host "Deploying to Azure Web App..." -ForegroundColor Cyan
-Push-Location dist
+Push-Location out
 try {
     # Using --html to force static content behavior
     az webapp up --name $AppName --sku F1 --location $Location --resource-group $ResourceGroup --html

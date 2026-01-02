@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { PenTool, Scissors, Truck } from 'lucide-react';

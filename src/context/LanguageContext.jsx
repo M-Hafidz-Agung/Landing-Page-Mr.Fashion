@@ -1,3 +1,5 @@
+'use client';
+
 import React, { createContext, useContext, useState } from 'react';
 
 const LanguageContext = createContext();
@@ -59,7 +61,7 @@ export const translations = {
                         },
                         {
                             title: 'Product Specialization',
-                            content: 'Bandung is the Paris van Java, a dynamic fashion hub. We have specialist teams for various categories:\n\n• **Modest Fashion & Hijab**: Our tailors deeply understand the nuances of cutting gamis, tunics, and modest yet stylish headscarves.\n• **Streetwear & Distro**: Experienced in plastisol printing, discharge, and 3D computer embroidery for distro-quality t-shirts and hoodies.\n• **Uniforms & Shirts**: Detailed workmanship for office uniforms, PDH/PDL, with fitting that is comfortable for all-day wear.'
+                            content: 'Bandung is the Paris van Java, a dynamic fashion hub. We have specialist teams for various categories:\n\n• Modest Fashion & Hijab: Our tailors deeply understand the nuances of cutting gamis, tunics, and modest yet stylish headscarves.\n• Streetwear & Distro: Experienced in plastisol printing, discharge, and 3D computer embroidery for distro-quality t-shirts and hoodies.\n• Uniforms & Shirts: Detailed workmanship for office uniforms, PDH/PDL, with fitting that is comfortable for all-day wear.'
                         },
                         {
                             title: 'Personal Quality Control',
@@ -205,11 +207,11 @@ export const translations = {
                         },
                         {
                             title: 'Spesialisasi Produk',
-                            content: 'Bandung adalah paris van java, pusat mode yang dinamis. Kami memiliki tim spesialis untuk berbagai kategori:\n\n• **Modest Fashion & Hijab**: Penjahit kami sangat paham nuansa pemotongan gamis, tunik, dan kerudung yang syar\'i namun modis.\n• **Streetwear & Distro**: Sablon plastisol, discharge, hingga bordir komputer 3D untuk kaos dan hoodie kualitas distro.\n• **Seragam & Kemeja**: Pengerjaan detail untuk seragam kantor, PDH/PDL, dengan fitting yang pas dan nyaman dipakai bekerja seharian.'
+                            content: 'Bandung adalah paris van java, pusat mode yang dinamis. Kami memiliki tim spesialis untuk berbagai kategori:\n\n• Modest Fashion & Hijab: Penjahit kami sangat paham nuansa pemotongan gamis, tunik, dan kerudung yang syar\'i namun modis.\n• Streetwear & Distro: Sablon plastisol, discharge, hingga bordir komputer 3D untuk kaos dan hoodie kualitas distro.\n• Seragam & Kemeja: Pengerjaan detail untuk seragam kantor, PDH/PDL, dengan fitting yang pas dan nyaman dipakai bekerja seharian.'
                         },
                         {
                             title: 'Quality Control Personal',
-                            content: 'Di skala UMKM, kami punya keunggulan yang tidak dimiliki pabrik besar: perhatian personal. Setiap potong pakaian diperiksa langsung oleh kepala produksi kami (Ibu/Bapak Supervisor) sebelum dlipat. Kami memastikan tidak ada sisa benang (trimming bersih), kancing terpasang kuat, dan ukuran sesuai chart. Jika ada cacat, kami garansi perbaikan 100% tanpa ribet. Ini adalah komitmen kami untuk menjaga kepercayaan Anda.'
+                            content: 'Di skala UMKM, kami punya keunggulan yang tidak dimiliki pabrik besar: perhatian personal. Setiap potong pakaian diperiksa langsung oleh kepala produksi kami sebelum dilipat. Kami memastikan agar trimming bersih, kancing terpasang kuat, dan ukuran sesuai chart. Jika ada cacat, kami garansi perbaikan 100% secara langsung. Ini adalah komitmen kami untuk menjaga kepercayaan Anda.'
                         }
                     ]
                 },
@@ -222,15 +224,15 @@ export const translations = {
                     extendedContent: [
                         {
                             title: 'Gudang & Pemenuhan Pesanan (Fulfillment)',
-                            content: 'Bagi UMKM, menyewa gudang sendiri dan menggaji staf packing adalah biaya besar. Layanan fulfillment kami di Bandung hadir sebagai solusi hemat biaya. Anda cukup kirimkan stok barang jadi ke lokasi kami (ruko yang aman dan bebas banjir). Ketika ada pesanan masuk dari Shopee, Tokopedia, atau TikTok Shop Anda, tim kami yang akan mengambil barang, mengemasnya dengan rapi (bisa tambah kartu ucapan/stiker brand Anda), dan menyerahkannya ke kurir. Anda fokus jualan, biar kami yang urus packing.'
+                            content: 'Bagi UMKM, menyewa gudang sendiri dan menggaji staf packing adalah biaya besar. Layanan fulfillment kami di Bandung hadir sebagai solusi hemat biaya. Ketika ada pesanan masuk dari Shopee, Tokopedia, atau TikTok Shop Anda, tim kami yang akan mengambil barang, mengemasnya dengan rapi (bisa tambah kartu ucapan/stiker brand Anda), dan menyerahkannya ke kurir. Anda fokus jualan, biar kami yang urus packing.'
                         },
                         {
                             title: 'Manajemen Stok Sederhana',
-                            content: 'Tidak perlu sofware yang rumit dan mahal. Kami memberikan laporan stok mingguan via WhatsApp atau Google Sheets yang mudah dipahami. Kami akan "mencolek" Anda jika stok produk best-seller sudah menipis, sehingga Anda bisa segera restock produksi. Kami menjaga stok Anda layaknya barang milik sendiri, disusun rapi di rak besi agar tidak lembab atau rusak.'
+                            content: 'Tidak perlu sofware yang rumit dan mahal. Kami memberikan laporan stok mingguan via WhatsApp atau Google Sheets yang mudah dipahami. Kami akan memberitahu anda jika stok produk best seller sudah menipis, sehingga anda bisa segera restock produksi. Kami menjaga stok Anda layaknya barang milik sendiri, disusun rapi di rak besi agar tidak lembab atau rusak.'
                         },
                         {
                             title: 'Dukungan Ekspedisi Lengkap',
-                            content: 'Lokasi kami strategis di Bandung, dekat dengan berbagai gerai logistik (JNE, J&T, SiCepat, Cargo Darat). Untuk pengiriman dalam jumlah besar (kodian/bal-balan) ke luar pulau, kami punya rekanan kargo darat dan laut yang jauh lebih murah daripada ekspedisi reguler, membantu Anda menekan harga jual ke reseller di luar Jawa.'
+                            content: 'Lokasi kami strategis di Bandung, dekat dengan berbagai gerai logistik (JNE, J&T, SiCepat, Cargo Darat). Untuk pengiriman dalam jumlah besar ke luar pulau, kami punya rekanan kargo darat dan laut yang jauh lebih murah daripada ekspedisi reguler, membantu anda menekan harga jual ke reseller di luar Jawa.'
                         }
                     ]
                 },
@@ -247,11 +249,11 @@ export const translations = {
                         },
                         {
                             title: 'Kustomisasi Kain (Celup & Knitting)',
-                            content: 'Ingin warna kain yang tidak pasaran? Kami bekerja sama dengan pabrik celup (dyeing) lokal di area Majalaya dan Cimahi. Anda bisa request warna khusus sesuai Pantone brand Anda dengan minimum order yang masuk akal (biasanya mulai 1 roll atau +/- 25kg). Kami juga bisa membantu develop kain rajut (knitting) dengan tekstur atau corak tertentu untuk Anda yang ingin tampil beda.'
+                            content: 'Ingin warna kain yang tidak pasaran? Kami bekerja sama dengan pabrik celup lokal di area Majalaya dan Cimahi. Anda bisa request warna khusus sesuai Pantone brand Anda dengan minimum order yang masuk akal. Kami juga bisa membantu develop kain rajut (knitting) dengan tekstur atau corak tertentu untuk Anda yang ingin tampil beda.'
                         },
                         {
                             title: 'Transparansi Harga & Kualitas',
-                            content: 'Banyak makloon yang memainkan harga kain. Di Mr. Fashion, kami transparan. Kami memberikan opsi grade kain sesuai budget Anda: apakah ingin standar distro (Cotton 24s/30s Reactive) atau standar ekonomis (Carded/TC). Kami jelaskan plus-minusnya di awal—misalnya soal penyusutan atau kelunturan—agar tidak ada kekecewaan di belakang. Kami memastikan kain yang dibeli adalah grade A, bukan kain kiloan BS (barang sisa) kecuali memang permintaan budget rendah.'
+                            content: 'Di Mr. Fashion, kami transparan, kami memberikan opsi grade kain sesuai budget Anda: apakah ingin standar distro (Cotton 24s/30s Reactive) atau standar ekonomis (Carded/TC). Kami jelaskan plus-minusnya di awal misalnya soal penyusutan atau ketahanan warna, agar tidak ada kekecewaan di belakang. Kami memastikan kain yang dibeli adalah grade A, bukan kain kiloan BS (barang sisa) kecuali memang permintaan budget rendah.'
                         }
                     ]
                 }

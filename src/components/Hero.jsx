@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
@@ -35,13 +37,13 @@ export default function Hero() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <Link
-                            to="/services"
+                            href="/services"
                             className="px-8 py-4 bg-stone-900 text-white rounded-full font-medium hover:bg-stone-800 transition-all hover:scale-105 shadow-lg"
                         >
                             {t.hero.ctaServices}
                         </Link>
                         <Link
-                            to="/contact"
+                            href="/contact"
                             className="px-8 py-4 bg-white text-stone-900 border border-stone-200 rounded-full font-medium hover:bg-pink-50 hover:border-pink-200 transition-all hover:scale-105 shadow-sm"
                         >
                             {t.hero.ctaContact}

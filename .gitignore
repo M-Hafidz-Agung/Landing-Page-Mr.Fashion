@@ -27,3 +27,8 @@ dist-ssr
 # Environment variables
 .env
 .env.*
+
+# Next.js
+.next
+out
+build
