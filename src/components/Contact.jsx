@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
 
-const whatsappNumber = "6281234567890"; // Replace with actual number
+const whatsappNumber = "6289656474322"; // Replace with actual number
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%20Mr.%20Fashion,%20I%20am%20interested%20in%20your%20services.`;
 
 export default function Contact() {

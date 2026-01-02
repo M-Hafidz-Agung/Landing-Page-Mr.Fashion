@@ -25,15 +25,22 @@ export default function Contact() {
                             {t.contact.heroDesc}
                         </p>
 
-                        <div className="p-8 bg-white rounded-2xl shadow-sm border border-stone-100">
+                        <div className="p-8 bg-white rounded-2xl shadow-sm border border-stone-100 flex flex-col gap-4">
                             <a
-                                href="https://wa.me/6281234567890?text=Halo%20Mr.Fashion,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                                href="https://wa.me/6289656474322?text=Halo%20Mr.Fashion,%20I%20would%20like%20to%20inquire%20about%20your%20services."
                                 target="_blank"
                                 rel="noreferrer"
                                 className="flex items-center justify-center gap-3 w-full py-4 bg-green-500 text-white rounded-xl font-bold text-lg hover:bg-green-600 transition-colors shadow-lg hover:shadow-green-200"
                             >
                                 <MessageCircle size={24} />
                                 {t.contact.whatsapp}
+                            </a>
+                            <a
+                                href="mailto:rahmatfashionapparel@gmail.com"
+                                className="flex items-center justify-center gap-3 w-full py-4 bg-white text-stone-900 border-2 border-stone-100 rounded-xl font-bold text-lg hover:border-pink-500 hover:text-pink-600 transition-colors"
+                            >
+                                <Mail size={24} />
+                                rahmatfashionapparel@gmail.com
                             </a>
                         </div>
                     </motion.div>
