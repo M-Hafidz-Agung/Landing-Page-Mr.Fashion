@@ -35,27 +35,7 @@ if (-not (Test-Path "out")) {
     exit 1
 }
 
-# Create a web.config for SPA routing in dist
-$webConfigContent = @"
-<?xml version="1.0"?>
-<configuration>
-    <system.webServer>
-        <rewrite>
-            <rules>
-                <rule name="React Routes" stopProcessing="true">
-                    <match url=".*" />
-                    <conditions logicalGrouping="MatchAll">
-                        <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
-                        <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
-                    </conditions>
-                    <action type="Rewrite" url="/" />
-                </rule>
-            </rules>
-        </rewrite>
-    </system.webServer>
-</configuration>
-"@
-Set-Content -Path "dist\web.config" -Value $webConfigContent
+# web.config is already in public/ and will be copied to out/ automatically during build
 
 # Deploy
 Write-Host "Deploying to Azure Web App..." -ForegroundColor Cyan
