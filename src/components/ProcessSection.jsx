@@ -25,7 +25,7 @@ export default function ProcessSection() {
     ];
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white relative z-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-pink-600 font-medium tracking-widest uppercase mb-2 text-sm">{t.process.subtitle}</h2>
@@ -38,8 +38,8 @@ export default function ProcessSection() {
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.5, delay: index * 0.2 }}
-                            viewport={{ once: true }}
                             className="text-center group p-6 rounded-2xl hover:bg-cream-50 transition-colors"
                         >
                             <div className="w-16 h-16 mx-auto bg-stone-100 rounded-full flex items-center justify-center text-stone-700 mb-6 group-hover:bg-pink-100 group-hover:text-pink-600 transition-all shadow-sm">
